@@ -1,0 +1,24 @@
+<%- include("./partials/header"); -%>
+
+    <h1>Compose</h1>
+
+    <form action="/compose" method="post">
+        <div class="form-group mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input class="form-control" type="text" name="postTitle" id="title" placeholder="Journal Title"autocomplete="off" autocapitalize="sentences" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="content" class="form-label">Content</label>
+            <textarea name="postContent" id="content" placeholder="Compose Today's Journal" class="form-control" cols="30" rows="11" autocapitalize="sentences" style="resize: none" required></textarea>
+        </div>
+        <button type="submit" name="button" class="btn btn-outline-secondary rounded-pill mb-4 btn-lg">Publish</button>
+    </form>
+
+
+
+    
+
+
+
+
+<%- include("./partials/footer"); -%>

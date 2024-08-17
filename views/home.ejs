@@ -1,0 +1,23 @@
+<%- include("./partials/header"); -%>
+
+    <h1>Home</h1>
+    <p> <%= homeContent %> </p>
+
+    <% posts.forEach((post) => { %>
+        <h3> <%= post.title %> </h3>
+        <p> 
+            <%= post.content.substring(0, 100) + " ..." %>
+            <a href="/posts/<%= post.title %>">Read More</a>
+        </p>
+        
+    <% }); %>
+
+
+    <!-- This is a commented-out version of the above js loop. Works similarly. -->
+    <!-- <% for (let i = 0; i < posts.length; i++) { %>
+        <h3> <%= posts[i].title %> </h3>
+        <p> <%= posts[i].content %> </p>
+    <% }; %> -->
+
+<%- include("./partials/footer"); -%>
+
